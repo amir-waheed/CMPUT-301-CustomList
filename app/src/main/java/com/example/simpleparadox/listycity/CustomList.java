@@ -71,6 +71,9 @@ public class CustomList extends ArrayAdapter<City> {
      */
     public boolean hasCity(City city) {
         boolean containsCity = false;
+        if (cities.contains(city)) {
+            containsCity = true;
+        }
         return containsCity;
     }
 }
