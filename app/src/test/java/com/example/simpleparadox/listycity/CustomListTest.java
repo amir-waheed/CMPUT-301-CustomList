@@ -19,7 +19,7 @@ public class CustomListTest {
     public void addCityTest() {
         int listSize = list.getCount();
         list.addCity(new City("Halifax", "NS"));
-        assertEquals(list.getCount(), listSize+1);
+        assertEquals(list.getCount(), listSize + 1);
     }
 
     @Test
@@ -27,5 +27,14 @@ public class CustomListTest {
         City city = new City("Edmonton", "AB");
         list.addCity(city);
         assertEquals(list.hasCity(city), true);
+    }
+
+    @Test
+    public void deleteCityTest() {
+        City city = new City("Toronto", "ON");
+        list.addCity(city);
+        assertEquals(list.hasCity(city), true);
+        list.delete(city);
+        assertEquals(list.hasCity(city), false);
     }
 }
