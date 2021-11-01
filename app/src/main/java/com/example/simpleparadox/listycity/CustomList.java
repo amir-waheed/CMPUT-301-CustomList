@@ -48,11 +48,29 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    /**
+     * this function will get the size of the list
+     * @return
+     */
     public int getCount() {
         return cities.size();
     }
 
+    /**
+     * this function will add a city object into the list
+     * @param city
+     */
     public void addCity(City city) {
         cities.add(city);
+    }
+
+    /**
+     * This returns a boolean of whether the city exists in the list
+     * @param city
+     * @return Return boolean
+     */
+    public boolean hasCity(City city) {
+        boolean containsCity = false;
+        return containsCity;
     }
 }
